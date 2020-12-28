@@ -1,0 +1,297 @@
+@media (max-width: 1385px){
+    .content{
+        &__row{
+            flex-direction: column-reverse;
+            &:nth-child(2){
+                flex-direction: column;
+            }
+        }
+        &__image{
+            max-width: 630px;
+            width: 100%;
+            height: 450px;
+            padding-bottom: 65px;
+            object-position: 50% 100%;
+            object-fit: cover;
+            &.second{
+                object-position: 50% 50%;
+            }
+            &.third{
+                object-position: 50% 65%;
+            }
+        }
+    }
+}
+@media (max-width: 1175px){
+    .footer{
+        &__wrapper{
+            flex-direction: column;
+            align-items: center;
+        }
+        &__left{
+            order: 1;
+        }
+        &__rigth{
+            padding-bottom: 100px;
+            max-width: 630px;
+            width: 100%;
+        }
+    }
+}
+@media (max-width: 1090px){
+    .parallax{
+        &-wrapper.title{
+            top: 22%;
+        }
+        &__center{
+            font-size: 60px;
+            line-height: 80px;
+        }
+        &__subtitle{
+            font-size: 14px;
+        }
+        &__hg{
+            width: 100%;
+            height: 910px;
+            object-fit: cover;
+        }
+        &__mg{
+            top: 40%;
+            width: 100%;
+            height: 760px;
+            object-fit: cover;
+        }
+        &__vg{
+            top: 58%;
+            width: 100%;
+            height: 670px;
+            object-fit: cover;
+            object-position: 50% 0%;
+        }
+    }
+}
+@media (max-width: 790px){
+    body.lock{
+        overflow: hidden;
+    }
+    .menu{
+        position: fixed;
+        top: -100%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 70px 0px 20px 10px;
+        transition: all 0.3s ease 0s;
+        backdrop-filter: blur(10px);
+        &.active{
+            top: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        &__list{
+            &-item{
+                display: block;
+                & + &{
+                    padding-left: 0px;
+                }
+            }
+            & li{
+                margin: 0px 0px 50px 0px
+            }
+        } 
+        &__burger{
+            display: block;
+            position: relative;
+            width: 30px;
+            height: 20px;
+            position: relative;
+            z-index: 4;
+            order: 1;
+            & span{
+                position: absolute;
+                background-color: #fff;
+                left: 0;
+                width: 100%;
+                height: 2px;
+                top: 9px;
+                transition: all 0.3s ease 0s;
+            }
+            &:before,
+            &:after{
+                content: '';
+                background-color: #fff;
+                position: absolute;
+                width: 100%;
+                height: 2px;
+                left: 0;
+                transition: all 0.3s ease 0s;
+            }
+            &:before{
+                top: 0;
+            }
+            &:after{
+                bottom: 0;
+            }
+            &.active span{
+                transform: scale(0);
+            }
+            &.active:before{
+                transform: rotate(45deg);
+                top: 9px;
+            }
+            &.active:after{
+                transform: rotate(-45deg);
+                bottom: 9px;
+            }
+        }
+    }
+    .parallax{
+        &__center{
+            font-size: 50px;
+            line-height: 65px;
+            padding: 22px 0;
+        }
+        &__subtitle{
+            font-size: 12px;
+        }
+        &__hg{
+            width: 100%;
+            height: 600px;
+            object-fit: cover;
+        }
+        &__mg{
+            top: 35%;
+            width: 100%;
+            height: 600px;
+            object-fit: cover;
+        }
+        &__vg{
+            top: 55%;
+            width: 100%;
+            height: 600px;
+            object-fit: cover;
+            object-position: 50% 0%;
+        }
+    }
+    .content{
+        padding-top: 100px;
+    }
+}
+
+@media (max-width: 690px){
+    .content{
+        padding-top: 0px;
+        &__subtitle p{
+            font-size: 12px;
+        }
+        &__title{
+            font-size: 47px;
+            line-height: 55px;
+            padding: 20px 0;
+        }
+        &__text{
+            font-size: 16px;
+        }
+        &__count{
+            bottom: 317px;
+        }
+    }
+    .parallax{
+        &__center{
+            font-size: 42px;
+            line-height: 50px;
+        }
+        &-wrapper{
+            padding: 0 32px;
+            &.title{
+                padding: 0 32px;
+            }
+        }
+    }
+}
+@media (max-width: 580px){
+    .footer{
+        &__rigth{
+            flex-direction: column;
+            align-items: end;
+            &-col:first-child{
+                padding-bottom: 100px;
+            }
+        }
+    }
+    .parallax{
+        &__center{
+            font-size: 35px;
+            line-height: 43px;
+            padding: 17px 0px;
+        }
+        &__subtitle{
+            font-size: 11px;
+        }
+        &__more p{
+            font-size: 15px;
+        }
+    }
+}
+@media (max-width: 530px){
+    .parallax{
+        &__center{
+            font-size: 35px;
+            line-height: 43px;
+            padding: 17px 0px;
+        }
+        &__subtitle{
+            font-size: 11px;
+            & img{
+                width: 40px;
+            }
+            & p{
+                margin-left: 15px;
+            }
+        }
+        &__more p{
+            font-size: 15px;
+        }
+    }
+}
+@media (max-width: 445px){
+    .content{
+        &__row{
+            padding-bottom: 100px;
+        }
+        &__image{
+            padding-bottom: 35px;
+        }
+        &__subtitle{
+            font-size: 11px;
+            & img{
+                width: 40px;
+            }
+            & p{
+                margin-left: 15px;
+                line-height: 18px;
+            }
+        }
+        &__title{
+            font-size: 40px;
+            line-height: 50px;
+        }
+        &__text{
+            font-size: 14px;
+        }
+    }
+    .footer{
+        &__bottom{
+            font-size: 13px;
+        }
+        &__rigth{
+            padding-bottom: 50px;
+            &-col:first-child {
+                padding-bottom: 50px;
+            }
+        }
+    }
+}
